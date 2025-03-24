@@ -5,15 +5,22 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import pandas as pd
 
+from main import app
 import layout
 import callbacks
 
+
 # Initialization and Data Processing -----------------------------------------------------------------------------------
 
-app = Dash(
-    __name__,
-    external_stylesheets=[dbc.themes.SLATE, dbc.icons.FONT_AWESOME],
-)
+income_df = pd.read_csv("datasets/FRED - CA Median Household Income.csv")
+expenses_df = pd.read_csv("datasets/BLS - Essential Expenses.csv")
+
+MAX_YR = min(income_df.Year.max(), expenses_df.Year.max())
+MIN_YR = max(income_df.Year.min(), expenses_df.Year.min())
+START_YR = 2015
+
+# print(MAX_YR)
+# print(MIN_YR)
 
 # Functions ------------------------------------------------------------------------------------------------------------
 
