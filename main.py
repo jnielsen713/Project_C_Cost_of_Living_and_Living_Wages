@@ -29,15 +29,15 @@ def make_income_line(year, members, adults):
     fig.add_trace(
         go.Scatter(
             x=income_df["Year"],
-            y=income_df["Median Household Income"],
-            name="CA Median Household Income",
+            y=(income_df["Income Adjusted for Individual (2.8)"] * members),
+            name="Your Recommended Income",
         )
     )
     fig.add_trace(
         go.Scatter(
             x=income_df["Year"],
-            y=(income_df["Income Adjusted for Individual (2.8)"] * members),
-            name="Your Recommended Income",
+            y=income_df["Median Household Income"],
+            name="CA Median Household Income",
         )
     )
     if adults > 1:
