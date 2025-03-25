@@ -3,7 +3,7 @@ Joshua Nielsen
 Prof. Mike Ryu  
 CS-150 Community Action Computing  
 
-![Screenshot of the visualizer in action](/assets/sample_screenshot.png)
+![Screenshot of the visualizer in action](/assets/Sample_Screenshot.png)
 
 ## Thesis Statement
 I want to create a dashboard people can use to consider the cost of living in California. I want to provide accurate, helpful data while leaving it wide open for exploration and discovery.
